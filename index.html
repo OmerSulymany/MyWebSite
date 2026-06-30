@@ -487,17 +487,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--text);outline-offse
 
   document.getElementById('accFontUp').addEventListener('click', function(){
     fontSize = Math.min(fontSize + 10, 140);
-    document.body.style.fontSize = fontSize + '%';
+    document.documentElement.style.fontSize = fontSize + '%';
   });
   document.getElementById('accFontDown').addEventListener('click', function(){
     fontSize = Math.max(fontSize - 10, 80);
-    document.body.style.fontSize = fontSize + '%';
+    document.documentElement.style.fontSize = fontSize + '%';
   });
   document.getElementById('accReset').addEventListener('click', function(){
     document.body.classList.remove('hc','gs','ul');
     document.querySelectorAll('.acc-btn.on').forEach(function(b){ b.classList.remove('on'); });
     fontSize = 100;
-    document.body.style.fontSize = '100%';
+    document.documentElement.style.fontSize = '100%';
   });
 
   /* ═══ Scroll Reveal ═══ */
